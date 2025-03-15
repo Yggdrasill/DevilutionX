@@ -4999,7 +4999,7 @@ bool ApplyOilToItem(Item &item, Player &player)
 		break;
 	case IMISC_OILFORT:
 		if (item._iMaxDur != DUR_INDESTRUCTIBLE && item._iMaxDur < 200) {
-			r = RandomIntBetween(10, 50);
+			r = 35;
 			item._iMaxDur += r;
 			item._iDurability += r;
 		}
