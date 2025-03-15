@@ -86,3 +86,11 @@ The source code in this repository is for non-commercial use only. If you use th
 Diablo® - Copyright © 1996 Blizzard Entertainment, Inc. All rights reserved. Diablo and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
 
 DevilutionX and any of its maintainers are in no way associated with or endorsed by Blizzard Entertainment®.
+
+# Changes from Upstream
+
+This personal fork of mine have made some changes that I much prefer:
+
+- Weapon attack speeds for both melee and bows have been fixed.
+- Bow speeds in Hellfire have been reverted to vanilla Diablo behaviour.
+- Fortitude oils now provide exactly 35 durability, instead of a random value 10-50.
