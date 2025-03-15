@@ -178,13 +178,13 @@ void StartAttack(Player &player, Direction d, bool includesFirstFrame)
 	// This will result in a different and slower attack speed.
 	if (HasAnyOf(flags, ItemSpecialEffect::FastestAttack)) {
 		// If the fastest attack logic is trigger frames in vanilla two frames are skipped, so missing the first frame reduces the skip logic by two frames.
-		skippedAnimationFrames = includesFirstFrame ? 4 : 2;
+		skippedAnimationFrames = 4;
 	} else if (HasAnyOf(flags, ItemSpecialEffect::FasterAttack)) {
-		skippedAnimationFrames = includesFirstFrame ? 3 : 2;
+		skippedAnimationFrames = 3;
 	} else if (HasAnyOf(flags, ItemSpecialEffect::FastAttack)) {
-		skippedAnimationFrames = includesFirstFrame ? 2 : 1;
+		skippedAnimationFrames = 2;
 	} else if (HasAnyOf(flags, ItemSpecialEffect::QuickAttack)) {
-		skippedAnimationFrames = includesFirstFrame ? 1 : 0;
+		skippedAnimationFrames = 1;
 	}
 
 	auto animationFlags = AnimationDistributionFlags::ProcessAnimationPending;
