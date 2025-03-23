@@ -1286,14 +1286,13 @@ void DrawView(const Surface &out, Point startPosition)
 	if (ChatLogFlag) {
 		DrawChatLog(out);
 	}
-	if (MyPlayerIsDead) {
-		RedBack(out);
-		DrawDeathText(out);
-	} else if (PauseMode != 0) {
-		gmenu_draw_pause(out);
-	}
 	if (IsDiabloMsgAvailable()) {
 		DrawDiabloMsg(out.subregionY(0, out.h() - GetMainPanel().size.height));
+	}
+	if (MyPlayerIsDead) {
+		RedBack(out);
+	} else if (PauseMode != 0) {
+		gmenu_draw_pause(out);
 	}
 
 	DrawControllerModifierHints(out);

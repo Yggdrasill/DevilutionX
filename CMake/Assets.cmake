@@ -99,7 +99,6 @@ set(devilutionx_assets
   fonts/30-03.clx
   fonts/30-04.clx
   fonts/30-20.clx
-  fonts/30-e0.clx
   fonts/42-00.clx
   fonts/42-01.clx
   fonts/42-02.clx
