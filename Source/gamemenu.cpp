@@ -34,6 +34,7 @@ namespace {
 // Forward-declare menu handlers, used by the global menu structs below.
 void GamemenuPrevious(bool bActivate);
 void GamemenuNewGame(bool bActivate);
+void GamemenuRestartTown(bool bActivate);
 void GamemenuOptions(bool bActivate);
 void GamemenuMusicVolume(bool bActivate);
 void GamemenuSoundVolume(bool bActivate);
@@ -113,6 +114,11 @@ void GamemenuNewGame(bool /*bActivate*/)
 	CornerStone.activated = false;
 	gbRunGame = false;
 	gamemenu_off();
+}
+
+void GamemenuRestartTown(bool /*bActivate*/)
+{
+	NetSendCmd(true, CMD_RETOWN);
 }
 
 void GamemenuSoundMusicToggle(const char *const *names, TMenuItem *menuItem, int volume)
